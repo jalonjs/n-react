@@ -1,0 +1,27 @@
+// 全局样式 慎用
+:global(.fs) {
+    font-size: 16px;
+}
+
+.bg-green {
+    background: #5ac3a5;
+}
+
+#ok {
+    color: red;
+}
+
+.wrapper {
+    padding: 10px;
+    box-shadow: 1px 2px 3px #40a070;
+    border-radius: 3px;
+    display: flex;
+    opacity: 0.8;
+    .name {
+        color: #2e2e2e;
+    }
+}
+
+.red {
+    color: red;
+}
