@@ -3,11 +3,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: "./src/index.js"
+        app: './src/client/index.js'
     },
     output: {
-        path: './dist',
-        filename: "[name]_[hash:8].js"
+        path: './dist/client',
+        filename: '[name]_[hash:8].js'
     },
     module: {
         loaders: [

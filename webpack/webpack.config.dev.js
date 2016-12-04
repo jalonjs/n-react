@@ -5,15 +5,15 @@ module.exports = {
     // 修改 entry
     entry: [
         // 写在入口文件之前
-        "webpack-dev-server/client?http://0.0.0.0:3000",
-        "webpack/hot/only-dev-server",
+        'webpack-dev-server/client?http://0.0.0.0:3000',
+        'webpack/hot/only-dev-server',
         // 这里是你的入口文件
-        "./src/index.js"
+        './src/client/index.js'
     ],
     output: {
-        path: __dirname + '/dist/',
-        filename: "bundle.js",
-        publicPath: "/dist/"
+        path: __dirname + '/dist/client/',
+        filename: 'bundle.js',
+        publicPath: '/dist/client/'
     },
     module: {
         loaders: [

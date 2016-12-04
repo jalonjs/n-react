@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node webpack/webpackDevServer",
-    "prod": "gulp clean && webpack --config webpack/webpack.config.prod.js && gulp injectToDist"
+    "dev": "babel-node src/server/app.js & node webpack/webpackDevServer",
+    "prod": "gulp clean && webpack --config webpack/webpack.config.prod.js && gulp injectToDist && babel ./src/server -s -d ./dist/server"
   },
   "author": "",
   "license": "ISC",
