@@ -11,9 +11,9 @@ module.exports = {
         './src/client/index.js'
     ],
     output: {
-        path: __dirname + '/dist/client/',
+        path: __dirname + '/dist/client/static/',
         filename: 'bundle.js',
-        publicPath: '/dist/client/'
+        publicPath: 'http://localhost:3000/dist/client/static/'
     },
     module: {
         loaders: [

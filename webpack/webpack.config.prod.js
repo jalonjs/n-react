@@ -6,7 +6,7 @@ module.exports = {
         app: './src/client/index.js'
     },
     output: {
-        path: './dist/client',
+        path: './dist/client/static',
         filename: '[name]_[hash:8].js'
     },
     module: {

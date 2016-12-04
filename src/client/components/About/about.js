@@ -9,10 +9,11 @@ import Logo from '../../static/image/logo.png'
     allowMultiple: true
 })
 export default class About extends React.Component {
+
     render() {
         return (
             <div className="fs">
-                <h5>关于</h5>
+                <h5>关于|About</h5>
                 <img style={{ marginBottom: 10 }} width="60"
                      src="https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1711333982,3893049826&fm=85&s=FDAE777E4436F598CA59C5C803006033"/>
                 <div styleName="wrapper bg-green">

@@ -12,7 +12,7 @@ export default class App extends React.Component {
             <div className="content">
                 <nav>
                     <Link to="/demo" activeStyle={{color: 'red'}}><i styleName="fa fa-star-o"></i>Demo</Link>|
-                    <Link to="/about" activeStyle={{color: 'red'}}><i styleName="fa fa-rocket"></i>About</Link>
+                    <Link to="/about" activeStyle={{color: 'green'}}><i styleName="fa fa-rocket"></i>About</Link>
                 </nav>
                 {this.props.children}
             </div>

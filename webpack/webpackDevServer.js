@@ -4,9 +4,11 @@ var config = require('./webpack.config.dev');
 
 new WebpackDevServer(webpack(config), {
     contentBase:  'src/client',
-    // proxy: {
-    //     "**": "http://localhost:3000"
-    // },
+    proxy: {
+        '/api/*': {
+            target: 'http://localhost:9000'
+        }
+    },
     publicPath: config.output.publicPath,
     hot: true,
     historyApiFallback: true
@@ -15,5 +17,5 @@ new WebpackDevServer(webpack(config), {
         return console.log(err);
     }
 
-    console.log('Listening at http://localhost:3000/')
+    console.log('webpack dev server is listening at http://localhost:3000/')
 });

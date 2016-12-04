@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "babel-node src/server/app.js & node webpack/webpackDevServer",
-    "prod": "gulp clean && webpack --config webpack/webpack.config.prod.js && gulp injectToDist && babel ./src/server -s -d ./dist/server"
+    "prod": "gulp clean && webpack --config webpack/webpack.config.prod.js && gulp injectStaticToDist && babel ./src/server -d ./dist/server"
   },
   "author": "",
   "license": "ISC",

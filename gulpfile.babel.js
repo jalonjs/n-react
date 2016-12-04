@@ -10,8 +10,8 @@ gulp.task('clean', () => {
 });
 
 
-// inject to dist and copy
-gulp.task('injectToDist', () => {
+// inject static files to dist and copy
+gulp.task('injectStaticToDist', () => {
     var target = gulp.src('./src/client/index.html');
     target
         .pipe(inject(gulp.src([
@@ -21,33 +21,12 @@ gulp.task('injectToDist', () => {
             transform: function (filepath) {
                 var ext = filepath.split('.').splice(-1)[0];
                 console.log(filepath);
-                filepath = filepath.replace('/dist/client', '');
+                filepath = filepath.replace('/dist/client/', '');
                 if (ext == 'js') {
-                    return '<script src=".' + filepath + '"></script>';
+                    return '<script src="' + filepath + '"></script>';
                 }
                 if (ext == 'css') {
-                    return '<link rel="stylesheet" href=".' + filepath + '">';
-                }
-            }
-        }))
-        .pipe(gulp.dest(distSrc));
-});// inject to dist and copy
-gulp.task('injectToDist', () => {
-    var target = gulp.src('./src/client/index.html');
-    target
-        .pipe(inject(gulp.src([
-            distSrc + '/**/*.js',
-            distSrc + '/**/*.css'
-        ], {read: false}), {
-            transform: function (filepath) {
-                var ext = filepath.split('.').splice(-1)[0];
-                console.log(filepath);
-                filepath = filepath.replace('/dist/client', '');
-                if (ext == 'js') {
-                    return '<script src=".' + filepath + '"></script>';
-                }
-                if (ext == 'css') {
-                    return '<link rel="stylesheet" href=".' + filepath + '">';
+                    return '<link rel="stylesheet" href="' + filepath + '">';
                 }
             }
         }))
